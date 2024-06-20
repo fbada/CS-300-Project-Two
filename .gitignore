@@ -1,5 +1,6 @@
 # Ignore the .vscode folder
 .vscode/
+course_planner
 
 # Other rules
 # Ignore node_modules folder
