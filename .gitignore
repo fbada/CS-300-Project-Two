@@ -1,1 +1,88 @@
-*.hpp
+# Ignore build directories
+/build/
+/bin/
+/obj/
+/out/
+
+# Ignore compiled object files
+*.o
+*.obj
+*.lo
+*.a
+*.lib
+*.dll
+*.so
+*.dylib
+
+# Ignore executable files
+*.exe
+*.out
+*.app
+course_planner
+test_ProjectTwo
+
+# Ignore precompiled headers
+*.gch
+*.pch
+
+# Ignore generated files
+*.d
+*.generated.cpp
+*.generated.h
+Makefile
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles
+cmake_install.cmake
+CMakeScripts
+
+# Ignore logs and databases
+*.log
+*.sql
+*.sqlite
+
+# Ignore temporary files
+*~
+*.swp
+*.swo
+*.tmp
+*.temp
+*.bak
+
+# Ignore MacOS specific files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Ignore Windows specific files
+Thumbs.db
+Desktop.ini
+
+# Ignore the directory used by Google Test for temporary files
+/test_results/
+
+# Ignore build tools
+/moc_*.cpp
+/ui_*.h
+/qrc_*.cpp
+
+# Ignore code coverage and profiling files
+*.gcda
+*.gcno
+*.gcov
+*.profraw
+
+# Ignore debug and release configurations
+/Debug/
+/Release/
+/build/
+
+# Ignore IDE specific files
+.idea/
+*.iml
+.vscode/
+*.code-workspace
+
+# Ignore dependency directories
+node_modules/
+vendor/
