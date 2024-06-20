@@ -5,8 +5,8 @@
 #include <vector>
 #include <sstream>
 #include <algorithm>
-#include <limits> 
-// #include <string> // Already included in <iostream>
+#include <limits>
+
 // Define ANSI color codes
 const std::string RESET = "\033[0m";
 const std::string GREEN = "\033[32m";
@@ -97,7 +97,7 @@ void PrintAllCourses(const std::unordered_map<std::string, Course>& courses) {
             }
             std::cout << std::endl;
         } else {
-            std::cout << MAGENTA << "Prerequisites: " << RESET << "NONE" << std::endl;
+            std::cout << MAGENTA << "Prerequisites: NONE" << RESET << std::endl;
         }
     }
     std::cout << CYAN << "======================================" << RESET << "\n";
@@ -122,7 +122,7 @@ void SearchCourse(const std::unordered_map<std::string, Course>& courses, const 
             }
             std::cout << std::endl;
         } else {
-            std::cout << MAGENTA << "Prerequisites: " << RESET << "NONE" << std::endl;
+            std::cout << MAGENTA << "Prerequisites: NONE" << RESET << std::endl;
         }
         std::cout << CYAN << "======================================" << RESET << "\n";
     } else {
@@ -165,6 +165,13 @@ void MainMenu() {
         // Flush the input buffer to avoid any leftover input issues
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
+        if (std::cin.fail() || choice < 1 || (choice > 3 && choice != 9)) {
+            std::cin.clear(); // Clear the error flag
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Discard invalid input
+            std::cout << ORANGE << "Invalid input. Please enter a valid option." << RESET << std::endl;
+            continue;
+        }
+
         switch (choice) {
             case 1:
                 LoadFileData(dataStructure);
@@ -179,7 +186,7 @@ void MainMenu() {
                 break;
             case 3:
                 if (coursesLoaded) {
-                    std::cout << "What course do you want to know about? (Enter the course code e.g. CSCI300)";
+                    std::cout << "What course do you want to know about? (Enter the course code e.g. CSCI300) ";
                     std::string courseNumber;
                     std::cin >> courseNumber;
                     SearchCourse(dataStructure, courseNumber);
