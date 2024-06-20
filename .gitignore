@@ -17,9 +17,7 @@
 # Ignore executable files
 *.exe
 *.out
-*.app
 course_planner
-test_ProjectTwo
 
 # Ignore precompiled headers
 *.gch
@@ -58,31 +56,14 @@ CMakeScripts
 Thumbs.db
 Desktop.ini
 
-# Ignore the directory used by Google Test for temporary files
-/test_results/
-
-# Ignore build tools
-/moc_*.cpp
-/ui_*.h
-/qrc_*.cpp
-
-# Ignore code coverage and profiling files
-*.gcda
-*.gcno
-*.gcov
-*.profraw
-
-# Ignore debug and release configurations
-/Debug/
-/Release/
-/build/
-
 # Ignore IDE specific files
 .idea/
-*.iml
 .vscode/
-*.code-workspace
+*.iml
 
 # Ignore dependency directories
 node_modules/
 vendor/
+
+# Ignore test results
+/test_results/
