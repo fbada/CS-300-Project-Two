@@ -178,7 +178,7 @@ void MainMenu() {
                 break;
             case 3:
                 if (coursesLoaded) {
-                    std::cout << "What course do you want to know about? ";
+                    std::cout << "What course do you want to know about? (Enter the course code e.g. CSCI300)";
                     std::string courseNumber;
                     std::cin >> courseNumber;
                     SearchCourse(dataStructure, courseNumber);
