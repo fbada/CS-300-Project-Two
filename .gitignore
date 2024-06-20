@@ -3,7 +3,8 @@
 /bin/
 /obj/
 /out/
-/.vscode/
+.vscode/
+
 
 # Ignore compiled object files
 *.o
