@@ -20,7 +20,7 @@ jobs:
       run: sudo apt-get update && sudo apt-get install -y g++ make
 
     - name: Compile the code
-      run: g++ -o my_program main.cpp
+      run: g++ -std=c++14 -o course_planner ProjectTwo.cpp
 
     - name: Run the program
-      run: ./my_program
+      run: ./course_planner
