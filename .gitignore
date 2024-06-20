@@ -3,6 +3,7 @@
 /bin/
 /obj/
 /out/
+/.vscode/
 
 # Ignore compiled object files
 *.o
@@ -17,6 +18,7 @@
 # Ignore executable files
 *.exe
 *.out
+*.hpp
 course_planner
 
 # Ignore precompiled headers
