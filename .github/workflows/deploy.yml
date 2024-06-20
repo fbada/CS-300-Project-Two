@@ -1,30 +1,32 @@
-name: Deploy Course Planner
+name: C++ Build
 
 on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
+    - name: Checkout code
+      uses: actions/checkout@v2
 
-      - name: Set up C++ environment
-        uses: actions/setup-cpp@v2
-        with:
-          cpp-version: '14'
+    - name: Set up C++ environment
+      run: sudo apt-get update && sudo apt-get install -y g++ cmake make
 
-      - name: Build and run application
-        run: |
-          g++ -std=c++14 -o course_planner ProjectTwo.cpp
-          ./course_planner
+    - name: Create build directory
+      run: mkdir build
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./
+    - name: Configure CMake
+      run: cmake -S . -B build
+
+    - name: Build project
+      run: cmake --build build
+
+    - name: Run tests
+      run: ctest --test-dir build
