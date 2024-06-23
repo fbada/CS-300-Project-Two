@@ -53,7 +53,3 @@ To run the compiled application, use the following command:
 ```sh
 ./course_planner
 ```
-## Project Structure
-- `ProjectTwo.cpp`: Main application code.
-- `ABCU_Advising_Program_Input.csv`: Sample input file containing course data.
-
