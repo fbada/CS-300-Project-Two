@@ -56,14 +56,6 @@ To run the compiled application, use the following command:
 - `ProjectTwo.cpp`: Main application code.
 - `ABCU_Advising_Program_Input.csv`: Sample input file containing course data.
 
-## Additional Information
-- **Color Coding**: The CLI uses color coding to enhance readability:
-  - **Green**: Course numbers.
-  - **Yellow**: Course titles.
-  - **Magenta**: Prerequisites.
-  - **Cyan**: Section headers and dividers.
-  - **Orange**: Error messages and warnings.
-
 ## Dockerized Deployment
 To deploy the Course Planner application using Docker, follow these steps:
 1. Build the Docker image:
