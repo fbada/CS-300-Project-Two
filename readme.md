@@ -65,3 +65,15 @@ To run the compiled application, use the following command:
   - **Cyan**: Section headers and dividers.
   - **Orange**: Error messages and warnings.
 
+## Dockerized Deployment
+To deploy the Course Planner application using Docker, follow these steps:
+1. Build the Docker image:
+```sh
+docker build -t course_planner_image .
+```
+2. Run the Docker container:
+```sh
+docker run -it --rm course_planner_image
+```
+
+In the Docker container, you can interact with the Course Planner application as you would in a local environment, no need to install any dependencies, just need to have Docker installed. clear
