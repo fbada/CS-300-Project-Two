@@ -34,115 +34,11 @@ The **Course Planner** application is a command-line interface (CLI) tool design
  Enter `9` to exit the application.
 
 ## Sample Output
-```sh
-Welcome to the course planner.
+//add the screenshots here
+## Sample Output
+![Course Planner Output](images/course_planner_output.png)
 
-======================================
-              Main Menu               
-======================================
-1. Load Data Structure.
-2. Print Course List.
-3. Print Course.
-9. Exit
-======================================
-What would you like to do? 1
-Enter the filename: ABCU_Advising_Program_Input.csv
-Course Data has been loaded.
-
-======================================
-              Main Menu               
-======================================
-1. Load Data Structure.
-2. Print Course List.
-3. Print Course.
-9. Exit
-======================================
-What would you like to do? 2
-
-======================================
-      Sample Course Schedule          
-======================================
-CSCI100, Introduction to Computer Science
-Prerequisites: NONE
-CSCI101, Introduction to Programming in C++
-Prerequisites: CSCI100
-CSCI200, Data Structures
-Prerequisites: CSCI101
-CSCI300, Introduction to Algorithms
-Prerequisites: CSCI200, MATH201
-CSCI301, Advanced Programming in C++
-Prerequisites: CSCI101
-CSCI350, Operating Systems
-Prerequisites: CSCI300
-CSCI400, Large Software Development
-Prerequisites: CSCI301, CSCI350
-MATH201, Discrete Mathematics
-Prerequisites: NONE
-======================================
-
-======================================
-              Main Menu               
-======================================
-1. Load Data Structure.
-2. Print Course List.
-3. Print Course.
-9. Exit
-======================================
-What would you like to do? 3
-What course do you want to know about? (Enter the course code e.g. CSCI300)CSCI400
-
-======================================
-          Course Details              
-======================================
-CSCI400, Large Software Development
-Prerequisites: CSCI301, CSCI350
-======================================
-
-======================================
-              Main Menu               
-======================================
-1. Load Data Structure.
-2. Print Course List.
-3. Print Course.
-9. Exit
-======================================
-What would you like to do? 4
-4 is not a valid option.
-
-======================================
-              Main Menu               
-======================================
-1. Load Data Structure.
-2. Print Course List.
-3. Print Course.
-9. Exit
-======================================
-What would you like to do? 10
-10 is not a valid option.
-
-======================================
-              Main Menu               
-======================================
-1. Load Data Structure.
-2. Print Course List.
-3. Print Course.
-9. Exit
-======================================
-What would you like to do? 3       
-What course do you want to know about? (Enter the course code e.g. CSCI300)CSCI201
-Course not found
-
-======================================
-              Main Menu               
-======================================
-1. Load Data Structure.
-2. Print Course List.
-3. Print Course.
-9. Exit
-======================================
-What would you like to do? 9
-Thank you for using the course planner!
-```
+![Course Planner Output](images/course_planner_output_002.png)
 
 ## Compilation and Execution
 

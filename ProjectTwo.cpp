@@ -1,3 +1,10 @@
+//============================================================================
+// Name        : ProjectTwo.cpp
+// Version     : 1.0
+// Copyright   : Copyright © 2024 SNHU COCE
+// Description : Project Two: Course Planner using Hash Table
+//============================================================================
+
 #include <iostream>
 #include <fstream>
 #include <unordered_map>
@@ -31,7 +38,7 @@ bool ValidateLine(const std::string& line) {
     while (std::getline(ss, item, ',')) {
         count++;
     }
-    return count >= 2;
+    return count >= 2; // Ensure there are at least two elements (course number and title)
 }
 
 // Function to parse each line and create a Course object
@@ -39,9 +46,9 @@ Course ParseLine(const std::string& line) {
     std::stringstream ss(line);
     std::string item;
     Course course;
-    std::getline(ss, course.courseNumber, ',');
-    std::getline(ss, course.title, ',');
-    while (std::getline(ss, item, ',')) {
+    std::getline(ss, course.courseNumber, ',');// Extract course number
+    std::getline(ss, course.title, ','); // Extract course title
+    while (std::getline(ss, item, ',')) {// Extract all prerequisites
         course.prerequisites.push_back(item);
     }
     return course;
@@ -60,7 +67,7 @@ std::unordered_map<std::string, Course> LoadCoursesFromFile(const std::string& f
     while (std::getline(file, line)) {
         if (ValidateLine(line)) {
             Course course = ParseLine(line);
-            courses[course.courseNumber] = course;
+            courses[course.courseNumber] = course; // Store course in map with course number as key
         } else {
             std::cerr << ORANGE << "Invalid line format: " << line << RESET << std::endl;
         }
@@ -80,13 +87,13 @@ void PrintAllCourses(const std::unordered_map<std::string, Course>& courses) {
     for (const auto& pair : courses) {
         keys.push_back(pair.first);
     }
-    std::sort(keys.begin(), keys.end());
+    std::sort(keys.begin(), keys.end()); // Sort course numbers 
     std::cout << "\n" << CYAN << "======================================" << RESET << "\n";
     std::cout << BLUE << "      Sample Course Schedule          " << RESET << "\n";
     std::cout << CYAN << "======================================" << RESET << "\n";
     for (const std::string& key : keys) {
         const Course& course = courses.at(key);
-        std::cout << GREEN << course.courseNumber << RESET << ", " << YELLOW << course.title << RESET << std::endl;
+        std::cout << GREEN << course.courseNumber << RESET << ", " << YELLOW << course.title << RESET << std::endl; // Print course number and title in green and yellow
         if (!PrerequisitesAreEmpty(course.prerequisites)) {
             std::cout << MAGENTA << "Prerequisites: " << RESET;
             for (const std::string& prerequisite : course.prerequisites) {
@@ -143,7 +150,7 @@ void LoadFileData(std::unordered_map<std::string, Course>& courses) {
     }
 }
 
-// Main menu function
+// Main menu function to provide user options in the course planner ranging from loading data to searching for a specific course, and exiting the program
 void MainMenu() {
     std::unordered_map<std::string, Course> dataStructure;
     bool coursesLoaded = false;
@@ -174,30 +181,37 @@ void MainMenu() {
 
         switch (choice) {
             case 1:
+            // Load data structure
                 LoadFileData(dataStructure);
                 coursesLoaded = true;
                 break;
             case 2:
+            // Print all courses
                 if (coursesLoaded) {
                     PrintAllCourses(dataStructure);
                 } else {
+                    // If data is not loaded, prompt user to load data first
                     std::cout << ORANGE << "Please load the data first using option 1." << RESET << std::endl;
                 }
                 break;
             case 3:
+            // Search for a specific course
                 if (coursesLoaded) {
                     std::cout << "What course do you want to know about? (Enter the course code e.g. CSCI300) ";
                     std::string courseNumber;
                     std::cin >> courseNumber;
                     SearchCourse(dataStructure, courseNumber);
                 } else {
+                    // If data is not loaded, prompt user to load data first
                     std::cout << ORANGE << "Please load the data first using option 1." << RESET << std::endl;
                 }
                 break;
             case 9:
+            // Exit the program
                 std::cout << GREEN << "Thank you for using the course planner!" << RESET << std::endl;
                 return;
             default:
+            // Invalid option selected by the user 
                 std::cout << ORANGE << choice << " is not a valid option." << RESET << std::endl;
         }
     }
@@ -205,6 +219,7 @@ void MainMenu() {
 
 // Main function
 int main() {
+    // Display welcome message and call the main menu function
     std::cout << BLUE << "Welcome to the course planner." << RESET << std::endl;
     MainMenu();
     return 0;
