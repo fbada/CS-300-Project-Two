@@ -1,5 +1,5 @@
 //============================================================================
-// Name        : ProjectTwo.cpp
+// Name        : Ada Fetic 
 // Version     : 1.0
 // Copyright   : Copyright © 2024 SNHU COCE
 // Description : Project Two: Course Planner using Hash Table
