@@ -34,6 +34,7 @@ The **Course Planner** application is a command-line interface (CLI) tool design
  Enter `9` to exit the application.
 
 ## Sample Output
+
 ![Course Planner Output](images/course_planner_output.png)
 
 ![Course Planner Output](images/course_planner_output_002.png)
@@ -51,7 +52,6 @@ To run the compiled application, use the following command:
 ```sh
 ./course_planner
 ```
-<<<<<<< HEAD
 ## Project Structure
 - `ProjectTwo.cpp`: Main application code.
 - `ABCU_Advising_Program_Input.csv`: Sample input file containing course data.
@@ -76,5 +76,3 @@ docker run -it --rm course_planner_image
 ```
 
 In the Docker container, you can interact with the Course Planner application as you would in a local environment, no need to install any dependencies, just need to have Docker installed. clear
-=======
->>>>>>> 739a9df313b75a9ec675d6fc421fc9ca0648cf07
