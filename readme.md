@@ -75,4 +75,4 @@ docker build -t course_planner_image .
 docker run -it --rm course_planner_image
 ```
 
-In the Docker container, you can interact with the Course Planner application as you would in a local environment, no need to install any dependencies, just need to have Docker installed. clear
+In the Docker container, you can interact with the Course Planner application as you would in a local environment, no need to install any dependencies, just need to have Docker installed. 
