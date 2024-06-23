@@ -34,8 +34,6 @@ The **Course Planner** application is a command-line interface (CLI) tool design
  Enter `9` to exit the application.
 
 ## Sample Output
-//add the screenshots here
-## Sample Output
 ![Course Planner Output](images/course_planner_output.png)
 
 ![Course Planner Output](images/course_planner_output_002.png)
