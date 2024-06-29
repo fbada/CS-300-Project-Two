@@ -3,7 +3,7 @@
 # 🎓 Course Planner
 
 ## Overview
-In the folders **Analysis** and **Pseudocode**, you will find the analysis and pseudocode for the Course Planner application. The main application code is located in the ProjectTwo.cpp file. The application allows users to load course data from a CSV file, view an alphanumerically ordered list of all courses, and print detailed information about specific courses, including their prerequisites.
+In the folders **Analysis** and **Pseudocode**, you will find the runtime analysis and pseudocode for the Course Planner application. The main application code is located in the ProjectTwo.cpp file. The application allows users to load course data from a CSV file, view an alphanumerically ordered list of all courses, and print detailed information about specific courses, including their prerequisites.
 
 ---
 
