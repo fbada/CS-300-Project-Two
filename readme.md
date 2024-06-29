@@ -3,6 +3,11 @@
 # 🎓 Course Planner
 
 ## Overview
+In the folders **Analysis** and **Pseudocode**, you will find the analysis and pseudocode for the Course Planner application. The main application code is located in the ProjectTwo.cpp file. The application allows users to load course data from a CSV file, view an alphanumerically ordered list of all courses, and print detailed information about specific courses, including their prerequisites.
+
+---
+
+## The Course Planner Application
 The **Course Planner** application is a command-line interface (CLI) tool designed to assist academic advisors in managing and viewing course data for a Computer Science program. It allows users to:
 - Load course data from a CSV file.
 -  Display an alphanumerically ordered list of all courses.
