@@ -2,7 +2,7 @@
 
 This is the pseudocode for the menu that will be displayed to the user. The menu will allow the user to load the data from a file into a data structure, print an alphanumerically ordered list of all the courses in the Computer Science department, print the course title and prerequisites for any individual course, and exit the program.
 
-```plaintext
+
 ---
 ```
 FUNCTION mainMenu()
